@@ -2,6 +2,8 @@
 Setup script for HW 1-3 of NYU's application security class on a freshly installed ubuntu VM
 
 ## Usage
+
+### HW1
 Run this script from the location where you want your homework repo to be cloned into
 
 Helpful tips for usage: 
@@ -17,31 +19,34 @@ The HW1 setup script will ask for the GPG key ID, this can be found by running
  
  See the link above for more information about the GPG key ID
 
-
 ```
-chmod +x setup.sh
-./setup.sh
+chmod +x setup_hw1_ubuntu.sh
+./setup_hw1_ubuntu.sh <repo_name> <email> <name> <gpg_id>
 ```
+- repo_name: this is just the name of the repository, not the whole url 
+- email: email associated with github account used for this class
+- name: your name
+- gpg_id: as mentioned above
 
-### Assumptions about setup
+### HW2
 
-- GPG key and SSH key already exist
+## Actions performed
 
 ### HW 1  
-- Add gpg key to git config, enable automatic signing on commit
+- Adds gpg key to git config, enable automatic signing on commit
 - git clone repo by name  
-- install AFL++ 
-- install GDB 
-- install lcov
+- installs AFL++ 
+- installs GDB 
+- installs lcov
 
 ### HW 2
 - git clone repo by name 
-- create virtual enviroment
-- install django via pip in venv
-- makemigrations and import dbs 
-- test runserver  
+- installs pip and venv
+- creates virtual enviroment
+- installs django via pip in venv
+- runs makemigrations and import dbs 
 
-### HW 3
+### HW 3 (WIP)
 - install docker within linux vm  
 - install kubectl 
 - install minikube
