@@ -14,5 +14,5 @@ jobs:
 
       - name: Run setup script
         run: |
-          chmod +x setup.sh
-          ./setup.sh
+          chmod +x ./Ubuntu/setup_hw1_ubuntu.sh
+          ./Ubuntu/setup_hw1_ubuntu.sh
