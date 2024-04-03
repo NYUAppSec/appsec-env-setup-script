@@ -5,21 +5,24 @@ Setup script for HW 1-3 of NYU's application security class on a freshly install
 Run this script from the directory where you want your homework repo to be cloned into
 
 `chmod +x setup.sh`
+
 `./setup.sh`
 
 ## Assumptions about setup
 
 - GPG key and SSH key already exist
 
-## Things needed on the setup script
+### Separate folders containing scripts for different OS 
+- Ubuntu
+- Debian 
+- Mac 
 
-### HW 1 
-- generate SSH key and GPG key for you? 
-- Add keys to git config? 
+### HW 1  
+- Add keys to git config
 - git clone repo by name  
 - install AFL++ 
-- install GDB? 
-- install lcov? 
+- install GDB 
+- install lcov
 
 ### HW 2
 - git clone repo by name 
@@ -32,5 +35,4 @@ Run this script from the directory where you want your homework repo to be clone
 - install docker within linux vm  
 - install kubectl 
 - install minikube
-- 
 

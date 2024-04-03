@@ -70,7 +70,7 @@ git config --global commit.gpgsign true
 
 while true; do
     read -p "Enter the name of your repository to clone (make sure your SSH public key has been added to your Github account settings first or this will fail): " REPO_URL
-    confirm "Your repository name is $REPO_URL, us this correct?" && break
+    confirm "Your repository name is $REPO_URL, is this correct?" && break
 done
 
 echo "Cloning repository..."
