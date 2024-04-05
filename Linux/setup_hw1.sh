@@ -16,25 +16,26 @@ echo "Installing git..."
 sudo apt install git
 
 echo "Cloning repository..."
-if ! git clone "git@github.com:NYUAppSec/$REPO_NAME.git"; then
-    if ! git clone "$REPO_NAME"; then 
-        echo "Error: Failed to clone repository, make sure you have setup SSH keys on your machine and added the public key to your github account"
-        exit 1
+git clone "git@github.com:NYUAppSec/$REPO_NAME.git" || git clone "$REPO_NAME"
+
+if [ $? -ne 0 ]; then
+    echo "Error: Failed to clone repository, make sure you have set up SSH keys on your machine and added the public key to your GitHub account"
+    exit 1
 fi
 
-echo "Adding GPG keys to git config..."
-git config --global user.email "$EMAIL"
-git config --global user.name "$NAME"
-git config --global user.signingkey "$GPG_ID"
-git config --global commit.gpgsign true
+# echo "Adding GPG keys to git config..."
+# git config --global user.email "$EMAIL"
+# git config --global user.name "$NAME"
+# git config --global user.signingkey "$GPG_ID"
+# git config --global commit.gpgsign true
 
 echo "Installing lcov..."
-sudo apt-get install lcov
+sudo apt-get -y install lcov
 
 echo "Installing AFL++..."
-sudo apt-get install afl++
+sudo apt-get -y install afl++
 
 echo "Installing GDB..."
-sudo apt-get install gdb
+sudo apt-get -y install gdb
 
 echo "Setup for HW1 complete..."
