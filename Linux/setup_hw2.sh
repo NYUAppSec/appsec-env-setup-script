@@ -8,10 +8,11 @@ if [ -z "$REPO_NAME" ]; then
 fi
 
 echo "Cloning repository..."
-if ! git clone "git@github.com:NYUAppSec/$REPO_NAME.git"; then
-    if ! git clone "$REPO_NAME"; then 
-        echo "Error: Failed to clone repository, make sure you have setup SSH keys on your machine and added the public key to your github account"
-        exit 1
+git clone "git@github.com:NYUAppSec/$REPO_NAME.git" || git clone "$REPO_NAME"
+
+if [ $? -ne 0 ]; then
+    echo "Error: Failed to clone repository, make sure you have set up SSH keys on your machine and added the public key to your GitHub account"
+    exit 1
 fi
 
 echo "Installing necessary packages..."
