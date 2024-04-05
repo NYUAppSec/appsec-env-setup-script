@@ -15,4 +15,7 @@ jobs:
       - name: Run setup script
         run: |
           chmod +x ./Ubuntu/setup_hw1_ubuntu.sh
-          ./Ubuntu/setup_hw1_ubuntu.sh test_repo test@example.com "Test User" test_gpg_id
+          ./Ubuntu/setup_hw1_ubuntu.sh https://github.com/NYUAppSec/appsec_hw1.git test@example.com "Test User" test_gpg_id
+          cd ./appsec_hw1/
+          gcc giftcardreader.c -o giftcardreader
+          make test
