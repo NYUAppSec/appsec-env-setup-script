@@ -1,30 +1,18 @@
 #!/usr/bin/env bash
 
-confirm() {
-    local response
-    while true; do
-        read -p "$1 (y/n): " response
-        case "$response" in
-            [yY][eE][sS]|[yY]) 
-                return 0
-                ;;
-            [nN][oO]|[nN])
-                return 1
-                ;;
-            *)
-                echo "Invalid input. Please enter 'y' for yes or 'n' for no."
-                ;;
-        esac
-    done
-}
+REPO_NAME="$1"
 
-while true; do
-    read -p "Enter the name of your repository to clone (make sure your SSH public key has been added to your Github account settings first or this will fail): " REPO_SSH_URL
-    confirm "Your repository name is $REPO_SSH_URL, is this correct?" && break
-done
+if [ -z "$REPO_NAME" ]; then
+    echo "Usage: $0 <repo_ssh_url>"
+    exit 1
+fi
 
 echo "Cloning repository..."
-git clone git@github.com:NYUAppSec/$REPO_SSH_URL.git
+if ! git clone "git@github.com:NYUAppSec/$REPO_NAME.git"; then
+    if ! git clone "$REPO_NAME"; then 
+        echo "Error: Failed to clone repository, make sure you have setup SSH keys on your machine and added the public key to your github account"
+        exit 1
+fi
 
 echo "Installing necessary packages..."
 sudo apt install python3-pip
@@ -32,7 +20,8 @@ sudo apt install python3-venv
 
 echo "Creating virtual enviroment..."
 python3 -m venv appsec_hw2
-pip3 install -r $REPO_SSH_URL/requirements.txt
+source ./appsec_hw2/bin/activate
+pip3 install -r $REPO_NAME/requirements.txt
 
 python3 manage.py makemigrations LegacySite
 python3 manage.py migrate
