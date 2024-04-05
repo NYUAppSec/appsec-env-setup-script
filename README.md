@@ -21,9 +21,9 @@ The HW1 setup script will ask for the GPG key ID, this can be found by running
 
 ```
 chmod +x setup_hw1_ubuntu.sh
-./setup_hw1_ubuntu.sh <repo_name> <email> <name> <gpg_id>
+./setup_hw1_ubuntu.sh <repo_ssh_url> <email> <name> <gpg_id>
 ```
-- repo_name: this is just the name of the repository, not the whole url 
+- repo_ssh_url: from repo site on github, click <> Code -> under clone -> click the ssh tab and copy the entire string -> paste as first arg to this script 
 - email: email associated with github account used for this class
 - name: your name
 - gpg_id: as mentioned above

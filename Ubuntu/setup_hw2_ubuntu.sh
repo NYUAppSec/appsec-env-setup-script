@@ -19,12 +19,12 @@ confirm() {
 }
 
 while true; do
-    read -p "Enter the name of your repository to clone (make sure your SSH public key has been added to your Github account settings first or this will fail): " REPO_NAME
-    confirm "Your repository name is $REPO_NAME, is this correct?" && break
+    read -p "Enter the name of your repository to clone (make sure your SSH public key has been added to your Github account settings first or this will fail): " REPO_SSH_URL
+    confirm "Your repository name is $REPO_SSH_URL, is this correct?" && break
 done
 
 echo "Cloning repository..."
-git clone git@github.com:NYUAppSec/$REPO_NAME.git
+git clone git@github.com:NYUAppSec/$REPO_SSH_URL.git
 
 echo "Installing necessary packages..."
 sudo apt install python3-pip
@@ -32,7 +32,7 @@ sudo apt install python3-venv
 
 echo "Creating virtual enviroment..."
 python3 -m venv appsec_hw2
-pip3 install -r $REPO_NAME/requirements.txt
+pip3 install -r $REPO_SSH_URL/requirements.txt
 
 python3 manage.py makemigrations LegacySite
 python3 manage.py migrate

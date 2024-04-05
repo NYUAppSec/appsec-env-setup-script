@@ -15,4 +15,4 @@ jobs:
       - name: Run setup script
         run: |
           chmod +x ./Ubuntu/setup_hw1_ubuntu.sh
-          ./Ubuntu/setup_hw1_ubuntu.sh
+          ./Ubuntu/setup_hw1_ubuntu.sh test_repo test@example.com "Test User" test_gpg_id
