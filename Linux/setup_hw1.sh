@@ -23,11 +23,11 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
-# echo "Adding GPG keys to git config..."
-# git config --global user.email "$EMAIL"
-# git config --global user.name "$NAME"
-# git config --global user.signingkey "$GPG_ID"
-# git config --global commit.gpgsign true
+echo "Adding GPG keys to git config..."
+git config --global user.email "$EMAIL"
+git config --global user.name "$NAME"
+git config --global user.signingkey "$GPG_ID"
+git config --global commit.gpgsign true
 
 echo "Installing lcov..."
 sudo apt-get -y install lcov
