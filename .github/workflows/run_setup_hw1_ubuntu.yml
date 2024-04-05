@@ -19,3 +19,4 @@ jobs:
           cd ./appsec_hw1/
           gcc giftcardreader.c -o giftcardreader
           make test
+          

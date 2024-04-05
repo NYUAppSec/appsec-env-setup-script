@@ -13,7 +13,7 @@ Make sure you create the GPG and SSH keys beforehand if you do not have them alr
 
 [Generating a new GPG Key](https://docs.github.com/en/authentication/managing-commit-signature-verification/generating-a-new-gpg-key)
 
-The HW1 setup script will ask for the GPG key ID, this can be found by running 
+The HW1 setup needs the GPG key ID to set up your git config settings, this can be found by running 
 
 `gpg --list-secret-keys --keyid-format=long`
  
@@ -21,11 +21,11 @@ The HW1 setup script will ask for the GPG key ID, this can be found by running
 
 ```
 chmod +x setup_hw1_ubuntu.sh
-./setup_hw1_ubuntu.sh <repo_ssh_url> <email> <name> <gpg_id>
+./setup_hw1_ubuntu.sh <repo_name> <email> <name> <gpg_id>
 ```
-- repo_ssh_url: from repo site on github, click <> Code -> under clone -> click the ssh tab and copy the entire string -> paste as first arg to this script 
+- repo_name: name of your homework 1 repository- just the name, not the whole URL
 - email: email associated with github account used for this class
-- name: your name
+- name: "your name" (dont forget quotes)
 - gpg_id: as mentioned above
 
 ### HW2
