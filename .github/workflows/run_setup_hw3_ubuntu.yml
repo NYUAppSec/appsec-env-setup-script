@@ -1,4 +1,4 @@
-name: Run setup script hw1
+name: Run setup script hw3
 on:
   push:
     branches:
@@ -14,12 +14,6 @@ jobs:
 
       - name: Run setup script
         run: |
-          chmod +x ./Linux/setup_hw1.sh
-          ./Linux/setup_hw1.sh
-          gdb -h
-          afl-fuzz -h
-          afl-cc -h
-          lcov -h
+          chmod +x ./Linux/setup_hw3.sh
+          ./Linux/setup_hw3.sh
 
-
-          

@@ -1,12 +1,13 @@
 # appsec-env-setup-script
-Setup script for HW 1-3 of NYU's application security class on a freshly installed ubuntu VM
+Setup script for HW 1-3 of NYU's application security class (currently for Ubuntu/Debian machines only) 
 
-## Usage
+## TODO
+1. Finish HW4 script for ubuntu  
+2. Add MacOS scripts
+3. Add windows script for HW2, HW3, HW4 (skipping HW1 as that is not a recommended platform for that assignment)
 
-### HW1
-Run this script from the location where you want your homework repo to be cloned into
+### setup_gpg
 
-Helpful tips for usage: 
 Make sure you create the GPG and SSH keys beforehand if you do not have them already 
 
 [Generating a new SSH key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
@@ -20,34 +21,50 @@ The HW1 setup needs the GPG key ID to set up your git config settings, this can 
  See the link above for more information about the GPG key ID
 
 ```
-chmod +x setup_hw1_ubuntu.sh
-./setup_hw1_ubuntu.sh <repo_name> <email> <name> <gpg_id>
+chmod +x setup_gpg.sh
+./setup_gpg.sh <email> <name> <gpg_id>
 ```
-- repo_name: name of your homework 1 repository- just the name, not the whole URL
 - email: email associated with github account used for this class
 - name: "your name" (dont forget quotes)
 - gpg_id: as mentioned above
 
-### HW2
+### setup_hw1
 
-## Actions performed
-
-### HW 1  
-- Adds gpg key to git config, enable automatic signing on commit
-- git clone repo by name  
 - installs AFL++ 
 - installs GDB 
 - installs lcov
 
-### HW 2
+Usage: 
+```
+chmod +x setup_hw1.sh
+./setup_hw1.sh
+```
+
+### setup_hw2
+
 - git clone repo by name 
 - installs pip and venv
 - creates virtual enviroment
 - installs django via pip in venv
 - runs makemigrations and import dbs 
 
-### HW 3 (WIP)
+Usage: 
+```
+chmod +x setup_hw2.sh
+./setup_hw2.sh <PATH-TO-REPO>
+```
+The path to repo here means the location on your filesystem where the root of the repository resides. So if you git cloned your repo to /home/example-user/appsec-homework-1-example, supply this as the argument to this script
+
+### setup_hw3
+
 - install docker within linux vm  
 - install kubectl 
 - install minikube
+
+Usage: 
+```
+chmod +x setup_hw3.sh
+./setup_hw3.sh
+```
+
 
