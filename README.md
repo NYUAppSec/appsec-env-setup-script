@@ -67,4 +67,16 @@ chmod +x setup_hw3.sh
 ./setup_hw3.sh
 ```
 
+## Setup HW4
+
+- install java
+- checks java installation
+- install android studio 
+- starts up android studio to verfiy installation  
+
+Usage: 
+```
+chmod +x setup_hw4.sh
+./setup_hw4.sh
+```
 
