@@ -16,10 +16,6 @@ jobs:
         run: |
           chmod +x ./Linux/setup_hw1.sh
           ./Linux/setup_hw1.sh
-          gdb -h
-          afl-fuzz -h
-          afl-cc -h
-          lcov -h
 
 
           

@@ -17,5 +17,5 @@ jobs:
           sudo apt install git
           git clone https://github.com/NYUAppSec/appsec_hw2.git
           chmod +x ./Linux/setup_hw2.sh
-          ./Linux/setup_hw2.sh ./appsec_hw2/
+          ./Linux/setup_hw2.sh ./appsec_hw2
 
