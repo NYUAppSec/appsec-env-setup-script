@@ -1,4 +1,4 @@
-name: Run setup script hw1
+name: Run setup script hw2
 on:
   push:
     branches:
@@ -14,12 +14,8 @@ jobs:
 
       - name: Run setup script
         run: |
-          chmod +x ./Linux/setup_hw1.sh
-          ./Linux/setup_hw1.sh
-          gdb -h
-          afl-fuzz -h
-          afl-cc -h
-          lcov -h
+          sudo apt install git
+          git clone https://github.com/NYUAppSec/appsec_hw2.git
+          chmod +x ./Linux/setup_hw2.sh
+          ./Linux/setup_hw2.sh ./appsec_hw2/
 
-
-          
