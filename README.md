@@ -28,7 +28,7 @@ chmod +x setup_gpg.sh
 - name: "your name" (dont forget quotes)
 - gpg_id: as mentioned above
 
-### setup_hw1
+## Setup HW1
 
 - installs AFL++ 
 - installs GDB 
@@ -40,7 +40,7 @@ chmod +x setup_hw1.sh
 ./setup_hw1.sh
 ```
 
-### setup_hw2
+## Setup HW2
 
 - git clone repo by name 
 - installs pip and venv
@@ -55,7 +55,7 @@ chmod +x setup_hw2.sh
 ```
 The path to repo here means the location on your filesystem where the root of the repository resides. So if you git cloned your repo to /home/example-user/appsec-homework-1-example, supply this as the argument to this script
 
-### setup_hw3
+## Setup HW3
 
 - install docker within linux vm  
 - install kubectl 
