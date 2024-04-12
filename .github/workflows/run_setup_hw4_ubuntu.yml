@@ -1,4 +1,4 @@
-name: Run setup script hw4
+name: Run setup script hw4 ubuntu
 on:
   push:
     branches:

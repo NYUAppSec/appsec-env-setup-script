@@ -1,4 +1,4 @@
-name: Run setup script hw3
+name: Run setup script hw3 ubuntu
 on:
   push:
     branches:
