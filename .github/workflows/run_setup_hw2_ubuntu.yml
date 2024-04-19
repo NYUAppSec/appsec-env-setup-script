@@ -1,4 +1,4 @@
-name: Run setup script hw2
+name: Run setup script on Ubuntu hw2
 on:
   push:
     branches:
