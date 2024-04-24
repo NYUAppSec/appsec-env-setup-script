@@ -1,4 +1,4 @@
-name: Run setup script on Mac hw1 
+name: Run setup script on Mac hw2 
 on:
   push:
     branches:
