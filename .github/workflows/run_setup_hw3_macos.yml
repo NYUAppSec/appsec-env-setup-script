@@ -1,0 +1,19 @@
+name: Run setup script on Mac hw3 
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  run_setup:
+    runs-on: macos-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Run setup script
+        run: |
+          chmod +x ./Mac/setup_hw3.sh
+          ./Mac/setup_hw3.sh
+
