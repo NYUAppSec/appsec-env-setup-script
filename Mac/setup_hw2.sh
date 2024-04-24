@@ -1,5 +1,3 @@
-# WIP
-
 #!/usr/bin/env bash
 set -ex 
 
@@ -11,9 +9,7 @@ if [ -z "$PATH_TO_REPO" ]; then
 fi
 
 echo "Installing necessary packages..."
-export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 brew install python
-python -m ensurepip --upgrade
 
 echo "Creating virtual environment and installing requirements..."
 cd "$PATH_TO_REPO" || exit
@@ -28,3 +24,4 @@ python3 manage.py shell -c 'import import_dbs'
 echo "Setup for HW2 complete, you can now activate the virtual environment and test server by running"
 echo "source PATH-TO-VENV/bin/activate"
 echo "python3 manage.py runserver"
+
