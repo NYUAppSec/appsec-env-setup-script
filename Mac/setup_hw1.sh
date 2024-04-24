@@ -26,7 +26,7 @@ source ~/.zshrc
 git clone https://github.com/AFLplusplus/AFLplusplus
 cd AFLplusplus
 
-sudo afl-system-config
+# sudo afl-system-config
 
 # Your Homebrew base may be different, you may need to uncomment the line below and comment out the other one if the script fails. Check your Homebrew base first
 
