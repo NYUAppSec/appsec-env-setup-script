@@ -1,0 +1,22 @@
+name: Run setup script on Mac hw1 
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  run_setup:
+    runs-on: macos-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Run setup script
+        run: |
+          git clone https://github.com/NYUAppSec/appsec_hw2.git
+          chmod +x ./Mac/setup_hw2.sh
+          ./Mac/setup_hw2.sh ./appsec_hw2
+
+
+          

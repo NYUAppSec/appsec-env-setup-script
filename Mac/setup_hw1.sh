@@ -18,10 +18,14 @@ brew install git
 echo "Installing lcov..."
 brew install lcov
 
+# install llvm and export path so build of AFL++ can find llvm-config
+brew install llvm
+echo 'export PATH="/usr/local/opt/llvm/bin:$PATH"' >> ~/.zshrc
+source ~/.zshrc 
+# clone and build AFLplusplus
 git clone https://github.com/AFLplusplus/AFLplusplus
 cd AFLplusplus
 make
-sudo make install
 
 brew install lcov
 
