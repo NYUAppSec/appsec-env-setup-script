@@ -10,7 +10,6 @@ sudo add-apt-repository ppa:maarten-fonville/android-studio
 sudo apt update
 sudo apt -y install android-studio
 
-cd /opt/android-studio/bin
-./studio.sh
-
 echo "Setup for HW4 complete..."
+echo "run to launch android studio: cd /opt/android-studio/bin"
+echo "./studio.sh"
