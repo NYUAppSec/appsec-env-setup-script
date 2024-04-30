@@ -3,7 +3,8 @@ set -ex
 
 # Docker installation from https://docs.docker.com/desktop/install/mac-install/
 
-brew cask install docker
+brew install docker
+brew install docker-compose
 
 docker run hello-world
 
