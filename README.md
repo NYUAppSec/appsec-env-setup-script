@@ -1,12 +1,13 @@
-# appsec-env-setup-script
-Setup script for HW 1-3 of NYU's application security class (currently for Ubuntu/Debian machines only) 
+# Homework Setup Scripts for NYU's Application Security course
+These sets of scripts will install all necessary software to run the applications provided in this course. Setup for homeworks 1,2,3,4 are currently implemented for Linux and MacOS machines (Windows WIP). Simply pull this repo and then navigate to the directory that your OS corresponds to and run the scripts as needed before working on your homework assignment. Please read all of the instructions and pay attention to the outputs of the scripts for more information.
 
 ## TODO
-1. Finish HW4 script for ubuntu  
-2. Add MacOS scripts
-3. Add windows script for HW2, HW3, HW4 (skipping HW1 as that is not a recommended platform for that assignment)
+1. Add windows script for HW2, HW3, HW4 (skipping HW1 as that is not a recommended platform for that assignment)
 
-### setup_gpg
+
+## setup_gpg
+
+This script will add your name, email, and GPG key ID to your gitconfig so that when you commit and push to github your commits will be signed with the GPG key you created. 
 
 Make sure you create the GPG and SSH keys beforehand if you do not have them already 
 
@@ -14,7 +15,7 @@ Make sure you create the GPG and SSH keys beforehand if you do not have them alr
 
 [Generating a new GPG Key](https://docs.github.com/en/authentication/managing-commit-signature-verification/generating-a-new-gpg-key)
 
-The HW1 setup needs the GPG key ID to set up your git config settings, this can be found by running 
+The setup needs the GPG key ID to set up your git config settings, this can be found by running 
 
 `gpg --list-secret-keys --keyid-format=long`
  
@@ -42,7 +43,7 @@ chmod +x setup_hw1.sh
 
 ## Setup HW2
 
-- git clone repo by name 
+- installs python
 - installs pip and venv
 - creates virtual enviroment
 - installs django via pip in venv
@@ -57,9 +58,9 @@ The path to repo here means the location on your filesystem where the root of th
 
 ## Setup HW3
 
-- install docker within linux vm  
-- install kubectl 
-- install minikube
+- installs docker within linux vm  
+- installs kubectl 
+- installs minikube
 
 Usage: 
 ```
@@ -71,8 +72,7 @@ chmod +x setup_hw3.sh
 
 - install java
 - checks java installation
-- install android studio 
-- starts up android studio to verfiy installation  
+- install android studios
 
 Usage: 
 ```
