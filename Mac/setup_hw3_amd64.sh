@@ -5,6 +5,8 @@ set -ex
 
 brew install docker
 brew install docker-compose
+sudo dockerd
+
 docker run hello-world
 
 
