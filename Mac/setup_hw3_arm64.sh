@@ -3,8 +3,6 @@ set -ex
 
 # Docker installation from https://docs.docker.com/desktop/install/mac-install/
 
-for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do sudo apt-get remove $pkg; done
-
 sudo hdiutil attach Docker.dmg
 sudo /Volumes/Docker/Docker.app/Contents/MacOS/install
 sudo hdiutil detach /Volumes/Docker
@@ -13,7 +11,6 @@ docker run hello-world
 
 
 # Kubectl installation from https://kubernetes.io/docs/tasks/tools/install-kubectl-macos/
-
 curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/darwin/arm64/kubectl"
 
 # Validate binary
