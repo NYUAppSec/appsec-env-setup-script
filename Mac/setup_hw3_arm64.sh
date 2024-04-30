@@ -3,9 +3,7 @@ set -ex
 
 # Docker installation from https://docs.docker.com/desktop/install/mac-install/
 
-sudo hdiutil attach Docker.dmg
-sudo /Volumes/Docker/Docker.app/Contents/MacOS/install
-sudo hdiutil detach /Volumes/Docker
+brew cask install docker
 
 docker run hello-world
 
