@@ -9,6 +9,8 @@ if [ -z "$PATH_TO_REPO" ]; then
 fi
 
 echo "Installing necessary packages..."
+echo "Updating Homebrew..."
+brew update
 brew install python
 
 echo "Creating virtual environment and installing requirements..."

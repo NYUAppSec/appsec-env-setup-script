@@ -18,7 +18,8 @@ brew install git
 echo "Installing lcov..."
 brew install lcov
 
-# docker pull aflplusplus/aflplusplus
-# docker run -ti -v /location/of/your/target:/src aflplusplus/aflplusplus
+echo "To install AFL++ on mac, you need to install docker desktop, start docker and pull the image from the dockerhub" 
+echo "docker pull aflplusplus/aflplusplus"
+echo "docker run -ti -v /location/of/your/target:/src aflplusplus/aflplusplus" 
 
 echo "Setup for HW1 complete..."

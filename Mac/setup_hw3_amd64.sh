@@ -3,6 +3,8 @@ set -ex
 
 # Docker installation from https://docs.docker.com/desktop/install/mac-install/
 
+echo "Updating Homebrew..."
+brew update
 # Install Docker Desktop
 brew install --cask docker
 
