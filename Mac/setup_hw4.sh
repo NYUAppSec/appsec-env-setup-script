@@ -1,17 +1,16 @@
-# WIP
-
 #!/usr/bin/env bash
 set -ex 
+echo "Updating Homebrew..."
+brew update
 
-# https://ubuntu.com/tutorials/install-jre#2-installing-openjdk-jre
-sudo apt install default-jre
+# https://apple.stackexchange.com/questions/276772/how-to-install-java-using-terminal
+brew install oracle-jdk --cask
 java -version 
 
-sudo add-apt-repository ppa:maarten-fonville/android-studio
-sudo apt update
-sudo apt install android-studio
+echo "Installing Android Studio..."
+brew install --cask android-studio
 
-cd /usr/local/android-studio/bin
-./studio.sh
+# Check Android Studio version
+/Applications/Android\ Studio.app/Contents/MacOS/studio --version
 
 echo "Setup for HW4 complete, you can now launch the android studio application and continue with the homework steps ..."
