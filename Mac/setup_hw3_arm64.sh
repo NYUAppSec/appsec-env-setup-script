@@ -3,12 +3,17 @@ set -ex
 
 # Docker installation from https://docs.docker.com/desktop/install/mac-install/
 
-brew install docker
-brew install docker-compose
-brew services start docker
+# Install Docker Desktop
+brew install --cask docker
 
+# Start Docker Desktop
+open /Applications/Docker.app
+
+# Wait for Docker to start
+sleep 10  # Adjust the timing as necessary
+
+# Run hello-world to test Docker installation
 docker run hello-world
-
 
 # Kubectl installation from https://kubernetes.io/docs/tasks/tools/install-kubectl-macos/
 curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/darwin/arm64/kubectl"
