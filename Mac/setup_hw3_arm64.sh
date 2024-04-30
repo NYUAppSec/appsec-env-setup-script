@@ -10,7 +10,7 @@ brew install --cask docker
 open /Applications/Docker.app
 
 # Wait for Docker to start
-sleep 10  # Adjust the timing as necessary
+sleep 20 # Adjust the timing as necessary
 
 # Run hello-world to test Docker installation
 docker run hello-world
