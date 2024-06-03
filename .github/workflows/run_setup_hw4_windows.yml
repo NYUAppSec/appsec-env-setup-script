@@ -1,0 +1,17 @@
+name: Run setup script on Windows hw4
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  run_setup:
+    runs-on: windows-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run setup script
+        run: |
+          pwsh ./Windows/setup_hw4.ps1
