@@ -1,11 +1,11 @@
 # Homework Setup Scripts for NYU's Application Security Course
-These sets of scripts will install all necessary software to run the applications provided in this course. Setup for homeworks 1,2,3,4 are currently implemented for Linux and MacOS machines (Windows WIP). Simply pull this repo and then navigate to the directory that your OS corresponds to and run the scripts as needed before working on your homework assignment. Please read all of the instructions and pay attention to the outputs of the scripts for more information.
+These sets of scripts will install all necessary software to run the applications provided in this course. Setup for homeworks 1,2,3,4 are currently implemented for Linux and MacOS machines, and setup for homeworks 2,3,4 are currently implemented for Windows machines (windows is not recommended for HW1). Simply pull this repo and then navigate to the directory that your OS corresponds to and run the scripts as needed before working on your homework assignment. Please read all of the instructions and pay attention to the outputs of the scripts for more information.
 
-## TODO
-1. Add windows script for HW2, HW3, HW4 (skipping HW1 as that is not a recommended platform for that assignment)
+These scripts are here for your convenience, but if you'd rather do the setups yourself that is totally cool too. If you have any problems with the scripts open an issue for the repo.  
 
+My personal advice after taking this course: use an Ubuntu VM or WSL with ubuntu for homeworks 1,2, and 3, and then just run android studio on your Windows host machine for homework 4. 
 
-## Setup GPG
+## Setup GPG (Mac and Linux only)
 
 This script will add your name, email, and GPG key ID to your gitconfig so that when you commit and push to github your commits will be signed with the GPG key you created. 
 
@@ -35,10 +35,16 @@ chmod +x setup_gpg.sh
 - installs GDB 
 - installs lcov
 
-Usage: 
+Usage (Linux and MacOS): 
 ```
 chmod +x setup_hw1.sh
-./setup_hw1.sh
+./<OS>/setup_hw1.sh
+```
+
+Usage (Windows): 
+In an open powershell terminal, 
+```
+pwsh ./Windows/setup_hw1.ps1
 ```
 
 ## Setup HW2
@@ -49,12 +55,19 @@ chmod +x setup_hw1.sh
 - installs django via pip in venv
 - runs makemigrations and import dbs 
 
-Usage: 
+Usage (Linux and MacOS): 
 ```
 chmod +x setup_hw2.sh
-./setup_hw2.sh <PATH-TO-REPO>
+./<OS>/setup_hw2.sh <PATH-TO-REPO>
 ```
 The path to repo here means the location on your filesystem where the root of the repository resides. So if you git cloned your repo to /home/example-user/appsec-homework-1-example, supply this as the argument to this script
+
+Usage (Windows): 
+In an open powershell terminal, 
+```
+pwsh ./Windows/setup_hw2.ps1
+```
+Ignore the PATH-TO-REPO argument in the linux/mac installation, you'll need to run those db setup and manage.py commands manually after cloning your repository to your local machine
 
 ## Setup HW3
 
@@ -62,11 +75,18 @@ The path to repo here means the location on your filesystem where the root of th
 - installs kubectl 
 - installs minikube
 
-Usage: 
+Usage (Linux and MacOS): 
 ```
 chmod +x setup_hw3.sh
-./setup_hw3.sh
+./<OS>/setup_hw3.sh
 ```
+
+Usage (Windows): 
+In an open powershell terminal, 
+```
+pwsh ./Windows/setup_hw3.ps1
+```
+
 
 ## Setup HW4
 
@@ -74,9 +94,14 @@ chmod +x setup_hw3.sh
 - checks java installation
 - install android studios
 
-Usage: 
+Usage (Linux and MacOS): 
 ```
 chmod +x setup_hw4.sh
-./setup_hw4.sh
+./<OS>/setup_hw4.sh
 ```
 
+Usage (Windows): 
+In an open powershell terminal, 
+```
+pwsh ./Windows/setup_hw4.ps1
+```
