@@ -1,4 +1,4 @@
-name: Run setup script on Mac hw2 
+name: Run setup script on Windows hw2
 on:
   push:
     branches:
@@ -6,7 +6,7 @@ on:
 
 jobs:
   run_setup:
-    runs-on: macos-latest
+    runs-on: windows-latest
     
     steps:
       - name: Checkout repository
@@ -14,9 +14,6 @@ jobs:
 
       - name: Run setup script
         run: |
+          sudo apt install git
           git clone https://github.com/NYUAppSec/appsec_hw2.git
-          chmod +x ./Mac/setup_hw2.sh
-          ./Mac/setup_hw2.sh ./appsec_hw2
-
-
-          
+          ./Windows/setup_hw2.sh ./appsec_hw2
