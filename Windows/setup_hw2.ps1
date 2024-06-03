@@ -34,10 +34,12 @@ Write-Output "Activating virtual environment..."
 Write-Output "Installing Django..."
 pip install django
 
-Write-Output "You can now run 
+Write-Host @"
+You can now run 
 python manage.py makemigrations LegacySite
 python manage.py migrate
 python manage.py shell -c 'import import_dbs'
 and activate the virtual environment and test server by running 
 $venvPath\Scripts\Activate.ps1
 python manage.py runserver
+"@

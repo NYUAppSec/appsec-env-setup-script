@@ -1,4 +1,4 @@
-name: Run setup script on Windows hw2
+name: Run setup script on Windows hw3
 on:
   push:
     branches:
