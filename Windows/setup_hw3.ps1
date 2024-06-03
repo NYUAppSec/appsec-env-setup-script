@@ -8,15 +8,45 @@ Start-Process -FilePath "$env:TEMP\DockerDesktopInstaller.exe" -ArgumentList "/q
 # Add Docker to system path
 $env:Path += ";C:\Program Files\Docker\Docker\resources\bin"
 
+# Check Docker installation
+Write-Output "Checking Docker installation..."
+docker --version
+if ($?) {
+    Write-Output "Docker installation successful."
+} else {
+    Write-Error "Docker installation failed."
+    exit 1
+}
+
 # Install kubectl
 Write-Output "Installing kubectl..."
 Invoke-WebRequest -Uri "https://dl.k8s.io/release/v1.24.1/bin/windows/amd64/kubectl.exe" -OutFile "C:\Program Files\kubectl.exe"
 [Environment]::SetEnvironmentVariable("Path", [Environment]::GetEnvironmentVariable("Path", "Machine") + ";C:\Program Files", "Machine")
 
+# Check kubectl installation
+Write-Output "Checking kubectl installation..."
+kubectl version --client
+if ($?) {
+    Write-Output "kubectl installation successful."
+} else {
+    Write-Error "kubectl installation failed."
+    exit 1
+}
+
 # Install Minikube
 Write-Output "Installing Minikube..."
 Invoke-WebRequest -Uri "https://github.com/kubernetes/minikube/releases/latest/download/minikube-installer.exe" -OutFile "$env:TEMP\minikube-installer.exe"
 Start-Process -FilePath "$env:TEMP\minikube-installer.exe" -ArgumentList "/S" -Wait
+
+# Check Minikube installation
+Write-Output "Checking Minikube installation..."
+minikube version
+if ($?) {
+    Write-Output "Minikube installation successful."
+} else {
+    Write-Error "Minikube installation failed."
+    exit 1
+}
 
 # Refresh the environment variables
 $env:Path = [System.Environment]::GetEnvironmentVariable("Path", "Machine")
