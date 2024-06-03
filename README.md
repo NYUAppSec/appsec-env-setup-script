@@ -1,11 +1,11 @@
-# Homework Setup Scripts for NYU's Application Security course
+# Homework Setup Scripts for NYU's Application Security Course
 These sets of scripts will install all necessary software to run the applications provided in this course. Setup for homeworks 1,2,3,4 are currently implemented for Linux and MacOS machines (Windows WIP). Simply pull this repo and then navigate to the directory that your OS corresponds to and run the scripts as needed before working on your homework assignment. Please read all of the instructions and pay attention to the outputs of the scripts for more information.
 
 ## TODO
 1. Add windows script for HW2, HW3, HW4 (skipping HW1 as that is not a recommended platform for that assignment)
 
 
-## setup_gpg
+## Setup GPG
 
 This script will add your name, email, and GPG key ID to your gitconfig so that when you commit and push to github your commits will be signed with the GPG key you created. 
 
