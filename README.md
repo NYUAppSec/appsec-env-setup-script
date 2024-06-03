@@ -38,7 +38,7 @@ chmod +x setup_gpg.sh
 Usage (Linux and MacOS): 
 ```
 chmod +x setup_hw1.sh
-./<OS>/setup_hw1.sh
+./setup_hw1.sh
 ```
 
 Usage (Windows): 
@@ -58,7 +58,7 @@ pwsh ./Windows/setup_hw1.ps1
 Usage (Linux and MacOS): 
 ```
 chmod +x setup_hw2.sh
-./<OS>/setup_hw2.sh <PATH-TO-REPO>
+./setup_hw2.sh <PATH-TO-REPO>
 ```
 The path to repo here means the location on your filesystem where the root of the repository resides. So if you git cloned your repo to /home/example-user/appsec-homework-1-example, supply this as the argument to this script
 
@@ -78,7 +78,7 @@ Ignore the PATH-TO-REPO argument in the linux/mac installation, you'll need to r
 Usage (Linux and MacOS): 
 ```
 chmod +x setup_hw3.sh
-./<OS>/setup_hw3.sh
+./setup_hw3.sh
 ```
 
 Usage (Windows): 
@@ -97,7 +97,7 @@ pwsh ./Windows/setup_hw3.ps1
 Usage (Linux and MacOS): 
 ```
 chmod +x setup_hw4.sh
-./<OS>/setup_hw4.sh
+./setup_hw4.sh
 ```
 
 Usage (Windows): 
